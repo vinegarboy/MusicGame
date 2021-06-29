@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Net.Http.Headers;
+using System.Data;
 using System.Data.Common;
 using System;
 using DxLibDLL;
@@ -7,27 +8,36 @@ using System.IO;
 
 namespace MusicGame
 {
+    class ViewWindow{
+        public void InitWindowSize(int width,int height){
+            DX.SetGraphMode(width,height,16);
+            DX.SetWindowSize(width,height);
+            DX.SetWindowMinSize(width,height);
+            DX.SetWindowMaxSize(width,height);
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            int width = 600,height = 400;
-            DX.ChangeWindowMode(DX.TRUE);
-            if (DX.DxLib_Init() < 0){
-                return;
-            }
-            DX.SetWindowMinSize(width,height);
-            DX.SetWindowSize(width,height);
-            DX.SetWindowMaxSize(width,height);
-            DX.SetWaitVSyncFlag(DX.FALSE);
-            DX.GetWindowSize(out width,out height);
-            int cb_x = width/2,cb_y=(height)/3;
-            Console.WriteLine($"{cb_x} {cb_y}");
+            int[,] wsizes={{640,480},{800,600},{1024,768},{1280,1024},{1280,720},{1920,1080}};
+            int width = wsizes[0,0],height = wsizes[0,1],cbp = 40,cb_w = width*(cbp/100),cb_h=height*(cbp/100);
+            //設定
+            DX.ChangeWindowMode(1);
+            DX.SetWindowSizeChangeEnableFlag( 0,0 ) ;
+            DX.DxLib_Init();
+            ViewWindow vw = new ViewWindow();
+            vw.InitWindowSize(width,height);
+            //debugMessage
+            Console.WriteLine($"cb_w{cb_w}  cb_h{cb_h}\n{(width/2)-(cb_w/2)},{(height/2)-(cb_h/2)},{(width/2)+(cb_w/2)},{(height/2)+(cb_h/2)}");
+            //メインのループ処理
             while(DX.CheckHitKey(DX.KEY_INPUT_ESCAPE)!=1){
+                //画面の更新処理
                 DX.ClearDrawScreen();
                 DX.SetDrawScreen(DX.DX_SCREEN_BACK);
+
                 //ここからメインループ
-                DX.DrawLine(cb_x,cb_y,cb_x,cb_y+100,DX.GetColor(255,255,255),DX.TRUE);
+                DX.DrawBox(width/2-cb_w/2,height/2-cb_h/2,width/2+cb_w/2,height/2+cb_h/2,DX.GetColor(255,255,255),DX.TRUE);
                 DX.ScreenFlip();
             }
             DX.DxLib_End();

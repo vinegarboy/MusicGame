@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj": {}
+    "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj": {
+    "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
+        "projectUniqueName": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
         "projectName": "MusicGame",
-        "projectPath": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
-        "packagesPath": "C:\\Users\\Vinegarman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\obj\\",
+        "projectPath": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
+        "packagesPath": "C:\\Users\\koder\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Vinegarman\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\koder\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,6 +27,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +39,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -50,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.409\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
