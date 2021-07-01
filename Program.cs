@@ -29,7 +29,6 @@ namespace MusicGame
             DX.DxLib_Init();
             ViewWindow vw = new ViewWindow();
             vw.InitWindowSize(width,height);
-            DX.SetFontSize(cb_w);
             //debugMessage
             Console.WriteLine($"");
             //メインのループ処理
@@ -40,7 +39,8 @@ namespace MusicGame
 
                 //ここからメインループ
                 DX.DrawBox(width/2-cb_w/2,height/2-cb_h/2,width/2+cb_w/2,height/2+cb_h/2,white,0);
-                DX.DrawString(width/2-cb_w/2,height/2-cb_h/2,"a",white);
+                DX.SetFontSize(Convert.ToInt32(cb_w*0.8));
+                DX.DrawString((width/2-cb_w/2)+(cb_w-Convert.ToInt32(cb_w*0.8))/2,(height/2-cb_h/2)+(cb_h-Convert.ToInt32(cb_w*0.8))/2,"a",white);
                 DX.ScreenFlip();
             }
             DX.DxLib_End();
