@@ -25,6 +25,8 @@ namespace MusicGame
             height = nh;
         }
         public int TitleWindow(){
+            DX.SetFontSize(width/10);
+            DX.DrawString(width/12,(height/24),"Type Music",white);
             return 0;
         }
         public int SelectWindow(){
