@@ -8,28 +8,31 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\koder\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Vinegarman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
+      "projectUniqueName": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
       "projectName": "MusicGame",
-      "projectPath": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
-      "packagesPath": "C:\\Users\\koder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\koder\\Documents\\Projects\\MusicGame\\obj\\",
+      "projectPath": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
+      "packagesPath": "C:\\Users\\Vinegarman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\koder\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Vinegarman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -62,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

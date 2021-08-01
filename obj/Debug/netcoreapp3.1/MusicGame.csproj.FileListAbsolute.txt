@@ -8,7 +8,6 @@ C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.As
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.AssemblyInfo.cs
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.dll
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.pdb
-C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csprojAssemblyReference.cache
 C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.AssemblyInfoInputs.cache
 C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.AssemblyInfo.cs
 C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.CoreCompileInputs.cache
@@ -24,3 +23,4 @@ C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGa
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.AssemblyReference.cache
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.CoreCompileInputs.cache
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.genruntimeconfig.cache
+C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.AssemblyReference.cache

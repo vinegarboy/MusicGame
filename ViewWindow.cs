@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using DxLibDLL;
 
 namespace MusicGame
@@ -8,6 +9,10 @@ namespace MusicGame
         //Title=0~2 Menu=3~7 Play~ other
         private int[] fontshundle = new int[20];
         private uint white = DX.GetColor(255,255,255);
+        public string[] musics_f;
+        public void SetMenuMusic(){
+            musics_f = Directory.GetDirectories("./musics/", "*", SearchOption.AllDirectories);
+        }
         public ViewWindow(int w,int h,int cw,int ch){
             cb_w=cw;
             cb_h=ch;
@@ -26,6 +31,7 @@ namespace MusicGame
             DX.DrawStringToHandle(width/12,(height/24),"Type Music",white,fontshundle[0]);
             DX.DrawStringToHandle(width/2,(height/3)*2,"Click",white,fontshundle[0]);
             if(DX.GetMouseInput()==1){
+                SetMenuMusic();
                 re=1;
             }
             return re;
