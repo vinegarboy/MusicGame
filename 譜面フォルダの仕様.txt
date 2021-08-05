@@ -1,0 +1,11 @@
+フォルダ内の構成
+
+info.if
+easy.fm
+normal.fm
+hard.fm
+img.png
+music.mp3
+
+info.if
+=>{title},{easy_level},{normal_level},{hard_level}

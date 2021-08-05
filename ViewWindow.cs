@@ -5,19 +5,26 @@ using DxLibDLL;
 namespace MusicGame
 {
     class ViewWindow{
-        private int width,height,cb_w,cb_h,re = 0;
+        private int width,height,cb_w,cb_h,re = 0,skey = 0;
         //Title=0~2 Menu=3~7 Play~ other
         private int[] fontshundle = new int[20];
         private uint white = DX.GetColor(255,255,255);
         public string[] musics_f;
+        public MusicDate[] md;
         public void SetMenuMusic(){
             musics_f = Directory.GetDirectories("./musics/", "*", SearchOption.AllDirectories);
+            md = new MusicDate[musics_f.Length];
+            for(int i = 0;i<md.Length;i++){
+                md[i] = new MusicDate(musics_f[i]);
+            }
         }
         public ViewWindow(int w,int h,int cw,int ch){
             cb_w=cw;
             cb_h=ch;
             this.InitWindowSize(w,h);
             fontshundle[0] = DX.CreateFontToHandle(null,width/10,10);
+            fontshundle[1] = DX.CreateFontToHandle(null,width/12,6);
+            fontshundle[2] = DX.CreateFontToHandle("游明朝",width/20,1);
         }
         public void InitWindowSize(int nw,int nh){
             DX.SetGraphMode(nw,nh,16);
@@ -37,7 +44,9 @@ namespace MusicGame
             return re;
         }
         public int SelectWindow(){
-            DX.DrawString(width/2,height/2,"Menu",white);
+            DX.DrawStringToHandle(0,0,"All Music",white,fontshundle[1]);
+            fontshundle[2] = DX.CreateFontToHandle("游明朝",width/20,1);
+            DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
             return re;
         }
         public int PlayWindow(){
