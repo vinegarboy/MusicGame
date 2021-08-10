@@ -9,7 +9,7 @@ namespace MusicGame
         public string img_path{get; set;}
         public string[] fm_d{get; set;}
         public int[] levs{get; set;}
-        //0 = easy 1 = normal 2 = hard
+        //0 = easy , 1 = normal , 2 = hard
         public string sound_path{get;set;}
         public MusicDate(string path){
             StreamReader sr = new StreamReader($"{path}/info.if");
