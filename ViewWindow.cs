@@ -38,6 +38,9 @@ namespace MusicGame
             a_w=a_h;
             a_x=(width/2)-(a_w/2);
             a_y=height/10;
+            fontshundle[0] = DX.CreateFontToHandle(null,width/10,10);
+            fontshundle[1] = DX.CreateFontToHandle(null,width/12,6);
+            fontshundle[2] = DX.CreateFontToHandle("游明朝",width/24,1);
         }
         public int TitleWindow(){
             DX.DrawStringToHandle(width/12,(height/24),"Type Music",white,fontshundle[0]);
@@ -51,27 +54,43 @@ namespace MusicGame
         public int SelectWindow(){
             int m_x,m_y;
             DX.DrawStringToHandle(0,0,"All Music",white,fontshundle[1]);
-            fontshundle[2] = DX.CreateFontToHandle("游明朝",width/20,1);
             if(md.Length ==1){
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[0].title,white,fontshundle[2]);
             }
             else if(md.Length ==2){
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
                 DX.GetMousePoint(out m_x,out m_y);
-                if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==0)||((DX.GetMouseInput()==0)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y>a_y&&m_y<a_y+a_h))){
-
-                }else if(DX.CheckHitKey(DX.KEY_INPUT_LEFT)==0||((DX.GetMouseInput()==0)&&(m_x>a_x&&m_x<a_x+(a_w/2))&&(m_y>a_y&&m_y<a_y+a_h))){
-
+                if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==0)||((DX.GetMouseInput()==0)&&(m_x>a_x+a_w))||((DX.GetMouseInput()==0)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y<a_y||m_y>a_y+a_h))){
+                    //選曲変更
+                    if(skey==0){
+                        skey=1;
+                    }else{
+                        skey=0;
+                    }
+                }else if((DX.CheckHitKey(DX.KEY_INPUT_LEFT)==0)||((DX.GetMouseInput()==0)&&(m_x<a_x))||((DX.GetMouseInput()==0)&&(m_x>a_x&&m_x<a_x+(a_w/2))&&(m_y<a_y||m_y>a_y+a_h))){
+                    //選曲変更
+                    if(skey==0){
+                        skey=1;
+                    }else{
+                        skey=0;
+                    }
                 }
-                
             }
             else{
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
                 DX.GetMousePoint(out m_x,out m_y);
-                if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==0)||((DX.GetMouseInput()==0)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y>a_y&&m_y<a_y+a_h))){
-
-                }else if(DX.CheckHitKey(DX.KEY_INPUT_LEFT)==0||((DX.GetMouseInput()==0)&&(m_x>a_x&&m_x<a_x+(a_w/2))&&(m_y>a_y&&m_y<a_y+a_h))){
-
+                if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==0)||((DX.GetMouseInput()==0)&&(m_x>a_x+a_w))||((DX.GetMouseInput()==0)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y<a_y||m_y>a_y+a_h))){
+                    //選曲変更(加算)
+                    skey++;
+                    if(skey>=md.Length){
+                        skey=0;
+                    }
+                }else if((DX.CheckHitKey(DX.KEY_INPUT_LEFT)==0)||((DX.GetMouseInput()==0)&&(m_x<a_x))||((DX.GetMouseInput()==0)&&(m_x>a_x&&m_x<a_x+(a_w/2))&&(m_y<a_y||m_y>a_y+a_h))){
+                    //選曲変更(減算)
+                    skey--;
+                    if(skey<0){
+                        skey = md.Length-1;
+                    }
                 }
             }
             return re;
