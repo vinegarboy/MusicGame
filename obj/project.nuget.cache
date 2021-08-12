@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "x1/wlVqKd+3G61YZ6IkykMqnBGrNIaKRmuJUVh6EJOZR8AWYuk3xSAvutdbeDlAlto2id5BQrja3whgpOa2pgw==",
+  "dgSpecHash": "eQ7VvaDm+UW9inSsQ1KVtEBi5skelYHtFgq4dQaUD2I0YMGHhPMv13ZNIGAAemLyQ7uKdznMq78IOR5Qhlvnnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vinegarman\\Documents\\Projects\\MusicGame\\MusicGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vinegarman\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Vinegarman\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Vinegarman\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

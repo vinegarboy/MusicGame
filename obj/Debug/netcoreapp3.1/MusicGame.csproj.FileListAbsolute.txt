@@ -24,3 +24,9 @@ C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.cs
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.CoreCompileInputs.cache
 C:\Users\koder\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.genruntimeconfig.cache
 C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.AssemblyReference.cache
+C:\Users\Vinegarman\Documents\Projects\MusicGame\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Vinegarman\Documents\Projects\MusicGame\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Vinegarman\Documents\Projects\MusicGame\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Vinegarman\Documents\Projects\MusicGame\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Vinegarman\Documents\Projects\MusicGame\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Vinegarman\Documents\Projects\MusicGame\obj\Debug\netcoreapp3.1\MusicGame.csproj.CopyComplete

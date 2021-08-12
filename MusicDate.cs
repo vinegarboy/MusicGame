@@ -6,7 +6,7 @@ namespace MusicGame
 {
     class MusicDate{
         public string title{get; set;}
-        public string img_path{get; set;}
+        public int img{get; set;}
         public string[] fm_d{get; set;}
         public string[] levs{get; set;}
         //0 = easy , 1 = normal , 2 = hard
@@ -24,7 +24,7 @@ namespace MusicGame
             fm_d[0] = (new StreamReader($"{path}/easy.fm")).ReadToEnd();
             fm_d[1] = (new StreamReader($"{path}/normal.fm")).ReadToEnd();
             fm_d[2] = (new StreamReader($"{path}/hard.fm")).ReadToEnd();
-            img_path = $"{path}/img.png";
+            img = DX.LoadGraph($"{path}/img.png");
             sound_path = $"{path}/music.mp3";
         }
     }

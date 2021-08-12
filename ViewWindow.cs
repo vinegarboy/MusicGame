@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Drawing;
 using DxLibDLL;
 
 namespace MusicGame
@@ -11,6 +12,9 @@ namespace MusicGame
         private uint white = DX.GetColor(255,255,255);
         public string[] musics_f;
         public MusicDate[] md;
+        private Font f;
+        private System.Drawing.Text.PrivateFontCollection pfc = new System.Drawing.Text.PrivateFontCollection();
+        private int[] images = new int[5];
         
         public void SetMenuMusic(){
             musics_f = Directory.GetDirectories("./musics/", "*", SearchOption.AllDirectories);
@@ -26,6 +30,8 @@ namespace MusicGame
             fontshundle[0] = DX.CreateFontToHandle(null,width/10,10);
             fontshundle[1] = DX.CreateFontToHandle(null,width/12,6);
             fontshundle[2] = DX.CreateFontToHandle("游明朝",width/20,1);
+            //init
+            pfc.AddFontFile("./skins/fonts/fonts.TTF");
         }
         public void InitWindowSize(int nw,int nh){
             DX.SetGraphMode(nw,nh,16);
@@ -37,7 +43,7 @@ namespace MusicGame
             a_h=height/3;
             a_w=a_h;
             a_x=(width/2)-(a_w/2);
-            a_y=height/10;
+            a_y=height/7;
             fontshundle[0] = DX.CreateFontToHandle(null,width/10,10);
             fontshundle[1] = DX.CreateFontToHandle(null,width/12,6);
             fontshundle[2] = DX.CreateFontToHandle("游明朝",width/24,1);
@@ -54,8 +60,9 @@ namespace MusicGame
         public int SelectWindow(){
             int m_x,m_y;
             DX.DrawStringToHandle(0,0,"All Music",white,fontshundle[1]);
+            DX.DrawExtendGraph(a_x,a_y,a_x+a_w,a_y+a_h,md[skey].img,0);
             if(md.Length ==1){
-                DX.DrawStringToHandle(width/2,(height*3)/4,md[0].title,white,fontshundle[2]);
+                DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
             }
             else if(md.Length ==2){
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
