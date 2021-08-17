@@ -68,6 +68,7 @@ namespace MusicGame
             }
             else if(md.Length ==2){
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
+                DX.DrawStringToHandle(width/2-(width/20)*4,(height*4)/7,$"Level:{md[skey].levs[lev_k]}",white,fontshundle[2]);
                 DX.GetMousePoint(out m_x,out m_y);
                 if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==1)||((DX.GetMouseInput()==1)&&(m_x>a_x+a_w))||((DX.GetMouseInput()==1)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y<a_y||m_y>a_y+a_h))){
                     //選曲変更
@@ -87,6 +88,7 @@ namespace MusicGame
             }
             else{
                 DX.DrawStringToHandle(width/2,(height*3)/4,md[skey].title,white,fontshundle[2]);
+                DX.DrawStringToHandle(width/2-(width/20)*4,(height*4)/7,$"Level:{md[skey].levs[lev_k]}",white,fontshundle[2]);
                 DX.GetMousePoint(out m_x,out m_y);
                 if((DX.CheckHitKey(DX.KEY_INPUT_RIGHT)==1)||((DX.GetMouseInput()==1)&&(m_x>a_x+a_w))||((DX.GetMouseInput()==1)&&(m_x>a_x+(a_w/2)&&m_x<a_x+a_w)&&(m_y<a_y||m_y>a_y+a_h))){
                     //選曲変更(加算)
